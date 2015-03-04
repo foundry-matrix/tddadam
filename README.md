@@ -21,7 +21,7 @@ One advantage of the node-style structure is that functions/components can be se
 
 2. Run ```npm install```.
 
-3. If editing script files, cd to the scripts dir and run ``` watchify public/scripts/main.js -v -o public/scripts/build/main.js```, leave running to update built file on the fly. N.B. You will need to intall watchify globally in order to invoke it ```npm install -g watchify```.
+3. If editing script files, run ```watchify public/scripts/main.js -v -o public/scripts/build/main.js```, leave running to update built file on the fly. N.B. You will need to intall watchify globally in order to invoke it ```npm install -g watchify```.
 
 4. To view in local browser, run ```npm start```. (Or install nodemon and use that.)
 
