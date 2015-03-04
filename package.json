@@ -1,0 +1,45 @@
+{
+  "name": "reactnotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamkowalczyk/ReactNotes.git"
+  },
+  "author": "Adam Kowalczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamkowalczyk/ReactNotes/issues"
+  },
+  "homepage": "https://github.com/adamkowalczyk/ReactNotes",
+  "browserify": {
+    "transform": [
+      [
+        "reactify"
+      ]
+    ]
+  },
+    "jest": {
+    "scriptPreprocessor": "<rootDir>/public/scripts/preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  },
+  "dependencies": {
+    "ecstatic": "^0.6.1",
+    "jquery": "^2.1.3",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "jest-cli": "^0.4.0",
+    "reactify": "^1.0.0",
+    "watchify": "^2.4.0"
+  }
+}
