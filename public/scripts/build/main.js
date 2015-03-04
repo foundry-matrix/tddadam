@@ -27453,7 +27453,10 @@ var TextEditor = React.createClass({displayName: "TextEditor",
     render: function(){
         return(
             React.createElement("div", {className: "TextEditor col-md-8 col-lg-8 col-sm-8 col-xs-12"}, 
-            React.createElement("textarea", {className: "textarea"})
+            React.createElement("input", {type: "text", placeholder: "Post Title", ref: "title"}), 
+            React.createElement("textarea", {className: "textarea"}), 
+            React.createElement("input", {type: "text", placeholder: "Your name", ref: "author"}), 
+            React.createElement("input", {type: "Submit", value: "Submit"})
             )
             );
     }
@@ -27497,7 +27500,7 @@ var IndivNote = React.createClass({displayName: "IndivNote",
     render: function(){
         return ( 
             React.createElement("li", null, 
-                React.createElement("p", null, " ", this.props.note.title, " ")
+                React.createElement("p", null, " ", this.props.note.text, " ")
             )
         );
     }
