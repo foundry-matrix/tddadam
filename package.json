@@ -13,9 +13,6 @@
   },
   "author": "Adam Kowalczyk",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/adamkowalczyk/ReactNotes/issues"
-  },
   "homepage": "https://github.com/adamkowalczyk/ReactNotes",
   "browserify": {
     "transform": [
