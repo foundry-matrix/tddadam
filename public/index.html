@@ -9,9 +9,104 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">     
         <link rel="stylesheet" href="/css/main.css">
 
+
+    <style>
+            .textbox {
+                height: 100px;
+                width: 173px;
+            }
+            .indivnote {
+                display: inline-block;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+            .header {
+                text-align: center;
+                border-radius: 10px;
+                border-color: red;
+                border-style: dashed;
+            }
+            #sidebar {
+                line-height:30px;
+                background-color:#eeeeee;
+                height:100%;
+                width:250px;
+                float:left;
+                padding:5px;          
+            }
+            #content {
+                width:1000px;
+                float:left;
+                padding:10px;        
+            }
+
+            .search{
+                text-align: center;
+                font: inherit;
+                border: 6px solid #a3d8d6;
+                padding: 13px 12px;
+                font-size: 15px;
+                box-shadow: 0 1px 1px #DDD;
+                width: 250px;
+                outline: none;
+                display: block;
+                color: #7B8585;
+                margin: 0 auto 20px;
+            }
+
+            .titles{
+                text-align: center;
+                font: inherit;
+                border: 6px solid #a3d8d6;
+              
+                font-size: 15px;
+                box-shadow: 0 1px 1px #DDD;
+                width: 173px;
+                outline: none;
+                display: block;
+                color: #7B8585;
+                margin: 0 auto 20px;
+            }
+
+            ul{
+                list-style: none;
+                display: inline-block;
+                width: 420px;
+                text-align: left;
+            }
+
+            ul li{
+                display: block;
+                padding: 15px 20px;
+                background-color: #F8F8F8;
+                color: #7B8585;
+                margin-bottom: 3px;
+                position: relative;
+                
+                transition: 0.3s;
+            }
+
+            ul li a{
+                position: absolute;
+                left: 160px;
+                font-size: 12px;
+                line-height: 16px;
+                color: #969d9d;
+            }
+
+            ul li:hover{
+                background-color:#d8f2f1;
+            }
+
+
+        </style>
+
     </head>
 
     <body>
+
+            <div id="sidebar"></div>
+    <div id="content"></div>
         <script src="/scripts/build/main.js"></script>
     </body>
 
