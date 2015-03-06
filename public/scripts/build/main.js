@@ -18226,7 +18226,7 @@ module.exports = warning;
 },{"./emptyFunction":"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/lib/emptyFunction.js","_process":"/usr/local/lib/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/react.js":[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/lib/React.js"}],"/Users/Greg/Google Drive/developer/week6/ReactNotes/public/scripts/components/title.js":[function(require,module,exports){
+},{"./lib/React":"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/lib/React.js"}],"/Users/Greg/Google Drive/developer/week6/ReactNotes/public/scripts/main.js":[function(require,module,exports){
 var React = require('react');
 
 
@@ -18234,36 +18234,22 @@ var Title = React.createClass({displayName: "Title",
     render: function(){
         console.log("about to render");
         return (
-                React.createElement("textarea", {className: "title-input"}, " 'cheese' ") 
+                React.createElement("input", {type: "text", className: "title-input"}, " 'asdf' ") 
             );
-    }
 
+    }
     
 });
 
-
-
 React.render(React.createElement(Title, null), document.body);
 
-module.exports = {
-    Title: Title
-};
 
-},{"react":"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/react.js"}],"/Users/Greg/Google Drive/developer/week6/ReactNotes/public/scripts/main.js":[function(require,module,exports){
-var React = require('react');
-var Title = require('./components/title.js')
 
-console.log("title is " + Title);
+// module.exports = {
+//     Title: Title
+// };
 
-var Container = React.createClass({displayName: "Container",
-    render: function(){
-        React.createElement(Title, null)
-    }
-});
-
-React.render(React.createElement(Container, null), document.body);
-
-},{"./components/title.js":"/Users/Greg/Google Drive/developer/week6/ReactNotes/public/scripts/components/title.js","react":"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/react.js"}],"/usr/local/lib/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js":[function(require,module,exports){
+},{"react":"/Users/Greg/Google Drive/developer/week6/ReactNotes/node_modules/react/react.js"}],"/usr/local/lib/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js":[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};

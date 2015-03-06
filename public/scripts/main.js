@@ -1,12 +1,21 @@
 var React = require('react');
-var Title = require('./components/title.js')
 
-console.log("title is " + Title);
 
-var Container = React.createClass({
+var Title = React.createClass({
     render: function(){
-        <Title/>
+        console.log("about to render");
+        return (
+                <input type="text" className="title-input"> 'asdf' </input> 
+            );
+
     }
+    
 });
 
-React.render(<Container/>, document.body);
+React.render(<Title/>, document.body);
+
+
+
+// module.exports = {
+//     Title: Title
+// };
