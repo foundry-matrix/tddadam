@@ -1,97 +1,12 @@
-var $ = require('jquery'); //Not currently used.
 var React = require('react');
+var Title = require('./components/title.js')
 
-var NoteApp = React.createClass({
+console.log("title is " + Title);
+
+var Container = React.createClass({
     render: function(){
-        return ( 
-            <div className="NoteApp col-md-6 col-lg-6 col-sm-8 col-xs-10">
-                <SearchableTable notes={this.props.notes}/>
-                <TextEditor notes={this.props.notes}/>
-
-            </div>
-        );
+        <Title/>
     }
 });
 
-var TextEditor = React.createClass({
-    render: function(){
-        return(
-            <div className="TextEditor col-md-8 col-lg-8 col-sm-8 col-xs-12">
-            <input type="text" placeholder="Post Title" ref="title" />
-            <textarea className="textarea"/>
-            <input type="text" placeholder="Your name" ref="author" />
-            <input type="Submit" value="Submit" /> 
-            </div>
-            );
-    }
-});
-
-var SearchableTable = React.createClass({
-    render: function(){
-        return (
-            <div className="SearchableTable col-md-4 col-lg-4 col-sm-4 col-xs-4">
-                <SearchField/>
-                <NoteList notes={this.props.notes}/>
-            </div>
-            );
-    }
-});
-
-var SearchField = React.createClass({
-    render: function(){
-        return(
-            <input type="text" className="SearchField" />
-            );
-    }
-});
-
-
-var NoteList = React.createClass({
-    render: function(){
-        var titles = [];
-        this.props.notes.forEach(function(note){
-            titles.push(<IndivNote note={note} />);
-        });
-
-        return (
-            <ul className='NoteList' > {titles} </ul>
-            );
-
-    }
-});
-
-var IndivNote = React.createClass({
-    render: function(){
-        return ( 
-            <li>
-                <p> {this.props.note.text} </p>
-            </li>
-        );
-    }
-});
-
-
-var notes = [
-     {author: 'Amil', title: 'Amils Text1', text: 'This is Amil here and this is my text'},
-     {author: 'Per', title: 'Pers Text1', text: 'This is Per here and this is my text'},
-     {author: 'Ron', title: 'Rons Text1', text: 'This is Ron here and this is my text'},
-     {author: 'Amil', title: 'Amils Text2', text: 'This is Amil here and this is my text'},
-     {author: 'Per', title: 'Pers Text2', text: 'This is Per here and this is my text'},
-     {author: 'Ron', title: 'Rons Text2', text: 'This is Ron here and this is my text'}
-];
-
-React.render(<NoteApp notes={notes}/>, document.body );
-
-function testMe(a,b) {
- return a+b;
-}
-
-module.exports = {
-    NoteApp: NoteApp, 
-    TextEditor: TextEditor, 
-    SearchableTable: SearchableTable,
-    SearchField: SearchField,
-    NoteList: NoteList,
-    IndivNote: IndivNote,
-    testMe: testMe 
-};
+React.render(<Container/>, document.body);
